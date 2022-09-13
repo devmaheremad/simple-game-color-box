@@ -4,9 +4,11 @@
 }
 body {
   box-sizing: border-box;
-}
-body {
   background-color: #eee;
+}
+.wrapper {
+  width: 80%;
+  margin: 25px auto;
 }
 ul {
   padding: 0;
@@ -14,14 +16,16 @@ ul {
   background-color: #ddd;
   margin: 20px auto;
   padding: 20px;
-  width: 400px;
+  width: 80%;
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 25px;
 }
 ul li {
-  width: 60px;
-  height: 60px;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
   border: 2px solid transparent;
   opacity: 0.4;
   cursor: pointer;
@@ -45,8 +49,22 @@ ul li:nth-child(4) {
 }
 .experiment {
   background-color: white;
-  width: 600px;
-  height: 300px;
+  max-width: 600px;
+  height: 150px;
   margin: 20px auto;
   transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 992px) {
+  ul {
+    width: 45%;
+    gap: 50px;
+  }
+  .experiment {
+    height: 500px;
+  }
+  ul li {
+    width: 60px;
+    height: 60px;
+  }
 }
