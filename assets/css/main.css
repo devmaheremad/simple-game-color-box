@@ -57,7 +57,7 @@ ul li:nth-child(4) {
 
 @media (min-width: 992px) {
   ul {
-    width: 45%;
+    max-width: 45%;
     gap: 50px;
   }
   .experiment {
